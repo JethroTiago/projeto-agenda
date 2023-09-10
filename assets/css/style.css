@@ -1,0 +1,34 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Cores*/
+    --background-principal: #e9dfcc;
+    --background-secundario: #cd5b51;
+    --font-color-principal: #352630;
+    --font-color-secundaria: #554865;
+    --cor-suporte: #f3a36b;
+
+    /*Fontes*/
+    --primary-font: 'Work Sans', sans-serif;
+    --secundary-font: 'Fjjala One', sans-serif;
+}
+
+.btn_agenda {
+    background-color: var(--background-secundario);
+    color: var(--branco);
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn_agenda:hover {
+    background-color: var(--cor-suporte);
+}

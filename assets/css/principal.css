@@ -1,0 +1,14 @@
+.principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-principal);
+    width: 100%;
+    height: 100vh;
+}
+
+.if_principal {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}

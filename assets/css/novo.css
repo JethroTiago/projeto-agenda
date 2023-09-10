@@ -1,0 +1,36 @@
+.novo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.formContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.formCampo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.formCampo input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.botoesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
