@@ -23,3 +23,71 @@ input[type=text] {
 label {
     margin-right: 10px;
 }
+
+.dgv {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.resultado {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50rem;
+}
+
+.titulos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: inherit;
+    background-color: var(--background-secundario);
+    color: var(--branco);
+    border-radius: 5px 5px 0 0;
+}
+
+.titulo {
+    border-right: 1px solid var(--branco);
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.dados {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: inherit;
+}
+
+.dados_linhas {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: inherit;
+}
+
+.col {
+    padding: 10px;
+}
+
+.c1 {
+    width: 10%;
+}
+
+.c2 {
+    width: 40%;
+}
+
+.c3 {
+    width: 20%;
+}
+
+.c4 {
+    width: 30%;
+}
