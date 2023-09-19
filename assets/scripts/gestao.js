@@ -36,6 +36,11 @@ const preencherdvg = () => {
             const imgdelete = document.createElement("img");
             imgdelete.setAttribute("src", "delete.svg");
             imgdelete.setAttribute("class", "iconeop");
+            imgdelete.addEventListener("click", (evento) => {
+                //console.log(evento.target.parentNode.parentNode.firstChild.innerHTML); "Pega o ID da div"
+                const id = evento.target.parentNode.parentNode.firstChild.innerHTML;
+                deletarContatos(id);
+            });
             const imgeditar = document.createElement("img");
             imgeditar.setAttribute("src", "edit.svg");
             imgeditar.setAttribute("class", "iconeop");
@@ -49,3 +54,14 @@ const preencherdvg = () => {
 };
 
 preencherdvg();
+
+const deletarContatos = (id) => {
+    const endpoint = `http://127.0.0.1:1880/deletarcontatos/${id}`;
+    fetch(endpoint)
+    .then (res => {
+        if(res.status == 200) {
+            //Rotina para remover do banco de dados
+            preencherdvg();
+        }
+    })
+};
