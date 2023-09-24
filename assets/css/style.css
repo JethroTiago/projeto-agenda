@@ -13,6 +13,7 @@
     --font-color-secundaria: #554865;
     --cor-suporte: #f3a36b;
     --branco: #dddddd;
+    --transparencia: rgba(0, 0, 0, 0.75);
 
     /*Fontes*/
     --primary-font: 'Work Sans', sans-serif;
