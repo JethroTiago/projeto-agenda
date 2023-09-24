@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/gestao.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/gestao.css">
+        <link rel="stylesheet" href="../css/popup.css">
+        <link rel="stylesheet" href="../css/novo.css">
+    </head>
 
-    <h1>Gestão</h1>
-    <div id="dgv" class="dgv">
-        <div id="resultado" class="resultado">
-            <div id="titulos" class="titulos">
-                <div class="titulo c1">id</div>
-                <div class="titulo c2">nome</div>
-                <div class="titulo c3">telefone</div>
-                <div class="titulo c4">e-mail</div>
-                <div class="titulo c5">comandos</div>
-            </div>
+    <body>
 
-            <div id="dados" class="dados">
-                <!-- <div class="dados_linhas">    
-                    <div class="col c1">id</div>
-                    <div class="col c2">nome</div>
-                    <div class="col c3">telefone</div>
-                    <div class="col c4">e-mail</div>
-                    <div class="col c5">comandos</div>
-                </div> -->
+        <h1>Gestão</h1>
+        <div id="dgv" class="dgv">
+            <div id="resultado" class="resultado">
+                <div id="titulos" class="titulos">
+                    <div class="titulo c1">id</div>
+                    <div class="titulo c2">nome</div>
+                    <div class="titulo c3">telefone</div>
+                    <div class="titulo c4">e-mail</div>
+                    <div class="titulo c5">comandos</div>
+                </div>
+                
+                <div id="dados" class="dados">
+                    <!-- <div class="dados_linhas">    
+                        <div class="col c1">id</div>
+                        <div class="col c2">nome</div>
+                        <div class="col c3">telefone</div>
+                        <div class="col c4">e-mail</div>
+                        <div class="col c5">comandos</div>
+                    </div> -->
+                </div>
             </div>
         </div>
-    </div>    
-    
-    <script type="module" src="../scripts/gestao.js"></script>
-</body>
-</html>
+        
+        <div id="fundopopup" class="fundopopup ocultar">
+            <div id="janelapopup" class="janelapopup">
+                <div id="titulopopup" class="titulopopup">Editar contato</div>
+                <div id="mainpopup" class="mainpopup">
+                    <div class="formCampo">
+                        <label>Id</label>
+                        <input type="text" name="form_id" id="form_id" readonly style="cursor: not-allowed;">
+                    </div>
+                    <div class="formCampo">
+                        <label>Nome</label>
+                        <input type="text" name="form_nome" id="form_nome">
+                    </div>
+                    <div class="formCampo">
+                        <label>Telefone</label>
+                        <input type="text" name="form_tel" id="form_tel">
+                    </div>
+                    <div class="formCampo">
+                        <label>E-mail</label>
+                        <input type="text" name="form_email" id="form_email">
+                    </div>
+                </div>
+                <div id="footerpopup" class="footerpopup">
+                    <button class="btn_agenda" id="btn_gravar">Gravar</button>
+                    <button class="btn_agenda" id="btn_cancelar">Cancelar</button>
+                </div> 
+            </div>
+        </div>
+            
+        <script type="module" src="../scripts/gestao.js"></script>
+    </body>
+    </html>

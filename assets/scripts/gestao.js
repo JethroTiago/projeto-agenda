@@ -1,4 +1,30 @@
 const dados = document.querySelector("#dados");
+const fundopopup = document.querySelector("#fundopopup");
+const btn_gravar = document.querySelector("#btn_gravar");
+const btn_cancelar = document.querySelector("#btn_cancelar");
+
+const form_id = document.querySelector("#form_id");
+const form_nome = document.querySelector("#form_nome");
+const form_tel = document.querySelector("#form_tel");
+const form_email = document.querySelector("#form_email");
+
+btn_gravar.addEventListener("click", (evento) => {
+    fundopopup.classList.add("ocultar");
+    const endpoint = `http://127.0.0.1:1880/atualizarcontatos/${form_id.value}/${form_nome.value}/${form_tel.value}/${form_email.value}`
+    fetch(endpoint)
+    .then (res => {
+        if (res.status == "200"){
+            alert("Dados atualizados com sucesso!");
+            preencherdvg();
+        } else {
+            alert("Erro ao atualizar informações.");
+        }
+    })
+});
+
+btn_cancelar.addEventListener("click", (evento) => {
+    fundopopup.classList.add("ocultar");
+});
 
 const preencherdvg = () => {
     dados.innerHTML = "";
@@ -44,6 +70,15 @@ const preencherdvg = () => {
             const imgeditar = document.createElement("img");
             imgeditar.setAttribute("src", "edit.svg");
             imgeditar.setAttribute("class", "iconeop");
+            imgeditar.addEventListener("click", (evento) => {
+                fundopopup.classList.remove("ocultar");
+                const dados = [...evento.target.parentNode.parentNode.childNodes];
+                form_id.value = dados[0].innerHTML;
+                form_nome.value = dados[1].innerHTML;
+                form_tel.value = dados[2].innerHTML;
+                form_email.value = dados[3].innerHTML;
+            });
+            
             coluna5.appendChild(imgdelete);
             coluna5.appendChild(imgeditar);
             linha.appendChild(coluna5);
