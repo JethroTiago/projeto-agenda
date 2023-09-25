@@ -5,6 +5,7 @@ const menu = document.querySelector("#home");
 const home = document.querySelector("#btn_home");
 const sobre = document.querySelector("#btn_sobre");
 const pesquisar = document.querySelector("#btn_pesquisar");
+const filtrar = document.querySelector("#btn_filtrar");
 const novo = document.querySelector("#btn_novo");
 const gestao = document.querySelector("#btn_gestao");
 
@@ -16,12 +17,16 @@ btn_sobre.addEventListener("click", (evt) => {
     abrirAba(evt.target, "./assets/pages/sobre.html");
 });
 
+btn_novo.addEventListener("click", (evt) => {
+    abrirAba(evt.target, "./assets/pages/novo.html");
+});
+
 btn_pesquisar.addEventListener("click", (evt) => {
     abrirAba(evt.target, "./assets/pages/pesquisar.html");
 });
 
-btn_novo.addEventListener("click", (evt) => {
-    abrirAba(evt.target, "./assets/pages/novo.html");
+btn_filtrar.addEventListener("click", (evt) => {
+    abrirAba(evt.target, "./assets/pages/filtrar.html");
 });
 
 btn_gestao.addEventListener("click", (evt) => {
