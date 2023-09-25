@@ -8,24 +8,6 @@ const form_nome = document.querySelector("#form_nome");
 const form_tel = document.querySelector("#form_tel");
 const form_email = document.querySelector("#form_email");
 
-btn_gravar.addEventListener("click", (evento) => {
-    fundopopup.classList.add("ocultar");
-    const endpoint = `http://127.0.0.1:1880/atualizarcontatos/${form_id.value}/${form_nome.value}/${form_tel.value}/${form_email.value}`
-    fetch(endpoint)
-    .then (res => {
-        if (res.status == "200"){
-            alert("Dados atualizados com sucesso!");
-            preencherdvg();
-        } else {
-            alert("Erro ao atualizar informações.");
-        }
-    })
-});
-
-btn_cancelar.addEventListener("click", (evento) => {
-    fundopopup.classList.add("ocultar");
-});
-
 const preencherdvg = () => {
     dados.innerHTML = "";
     const entpoint = `http://127.0.0.1:1880/pesquisartodoscontatos`;
