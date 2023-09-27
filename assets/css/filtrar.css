@@ -1,0 +1,16 @@
+.filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.filtro_icone {
+    width: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.filtro_icone:hover {
+    transform: scale(1.5);
+}
