@@ -8,24 +8,30 @@ const form_nome = document.querySelector("#form_nome");
 const form_tel = document.querySelector("#form_tel");
 const form_email = document.querySelector("#form_email");
 
-const filtra_nome = document.querySelector("#filtra_nome");
+const filtro_nome = document.querySelector("#filtro_nome");
 const btn_filtrar = document.querySelector("#btn_filtrar");
 
 btn_gravar.addEventListener("click", (evento) => {
     fundopopup.classList.add("ocultar");
     const endpoint = `http://127.0.0.1:1880/atualizarcontatos/${form_id.value}/${form_nome.value}/${form_tel.value}/${form_email.value}`
+    console.log(endpoint);
     fetch(endpoint)
     .then (res => {
         if (res.status == "200"){
-            preencherdvg("http://127.0.0.1:1880/pesquisartodoscontatos");
+            preencherdgv("http://127.0.0.1:1880/pesquisartodoscontatos");
         } else {
             alert("Erro ao atualizar informações.");
         }
     })
 });
 
-const preencherdvg = (endpoint) => {
+btn_cancelar.addEventListener("click", (evento) => {
+    fundopopup.classList.add("ocultar");
+});
+
+const preencherdgv = (endpoint) => {
     dados.innerHTML = "";
+    //const entpoint = `http://127.0.0.1:1880/pesquisartodoscontatos`;
     fetch(endpoint)
     .then(res => res.json())
     .then(res => {
@@ -85,23 +91,22 @@ const preencherdvg = (endpoint) => {
     })
 };
 
-preencherdvg();
+preencherdgv();
 
 const deletarContatos = (id) => {
     const endpoint = `http://127.0.0.1:1880/deletarcontatos/${id}`;
     fetch(endpoint)
     .then (res => {
         if(res.status == 200) {
-            //Rotina para remover do banco de dados
-            preencherdvg("http://127.0.0.1:1880/pesquisartodoscontatos");
+            preencherdgv("http://127.0.0.1:1880/pesquisartodoscontatos");
         }
     })
 };
 
 btn_filtrar.addEventListener("click", (evento) => {
-    if(filtra_nome.value == "") {
-        preencherdvg("http://127.0.0.1:1880/pesquisartodoscontatos");
+    if (filtro_nome.value == "") {
+        preencherdgv("http://127.0.0.1:1880/pesquisartodoscontatos");
     } else {
-        preencherdvg(`http://127.0.0.1:1880/filtrar/${filtra_nome.value}`);
+        preencherdgv(`http://127.0.0.1:1880/filtrar/${filtro_nome.value}`);
     }
-});
+})
