@@ -14,13 +14,15 @@
 
         <h1>Filtrar</h1>
 
-        <div id="filtro" class="filtro">
-            <div class="formCampo">
+        <div class="filtrar">
+            <div id="filtro" class="filtro">
                 <label>Nome</label>
-                <input type="text" name="filtra_nome" id="filtra_nome">
-            </div>
-            <div class="formCampo">
-                <img src="./filter.svg" class="filtro_icone" id="btn_filtrar" alt="Botão para filtrar">
+                <div class="filtroCampo">
+                    <input type="text" class="filtro_nome" id="filtro_nome">
+                </div>
+                <div class="filtroCampo">
+                    <img src="./filter.svg" class="filtro_icone" id="btn_filtrar">
+                </div>
             </div>
         </div>
 
@@ -43,6 +45,34 @@
                         <div class="col c5">comandos</div>
                     </div> -->
                 </div>
+            </div>
+        </div>
+        
+        <div id="fundopopup" class="fundopopup ocultar">
+            <div id="janelapopup" class="janelapopup">
+                <div id="titulopopup" class="titulopopup">Editar contato</div>
+                <div id="mainpopup" class="mainpopup">
+                    <div class="formCampo">
+                        <label>Id</label>
+                        <input type="text" name="form_id" id="form_id" readonly style="cursor: not-allowed;">
+                    </div>
+                    <div class="formCampo">
+                        <label>Nome</label>
+                        <input type="text" name="form_nome" id="form_nome">
+                    </div>
+                    <div class="formCampo">
+                        <label>Telefone</label>
+                        <input type="text" name="form_tel" id="form_tel">
+                    </div>
+                    <div class="formCampo">
+                        <label>E-mail</label>
+                        <input type="text" name="form_email" id="form_email">
+                    </div>
+                </div>
+                <div id="footerpopup" class="footerpopup">
+                    <button class="btn_agenda" id="btn_gravar">Gravar</button>
+                    <button class="btn_agenda" id="btn_cancelar">Cancelar</button>
+                </div> 
             </div>
         </div>
             
