@@ -2,12 +2,12 @@ const cabecalho = document.querySelector("#cabecalho");
 
 const menu = document.querySelector("#home");
 
-const home = document.querySelector("#btn_home");
-const sobre = document.querySelector("#btn_sobre");
-const pesquisar = document.querySelector("#btn_pesquisar");
-const filtrar = document.querySelector("#btn_filtrar");
-const novo = document.querySelector("#btn_novo");
-const gestao = document.querySelector("#btn_gestao");
+const btn_home = document.querySelector("#btn_home");
+const btn_sobre = document.querySelector("#btn_sobre");
+const btn_pesquisar = document.querySelector("#btn_pesquisar");
+const btn_filtrar = document.querySelector("#btn_filtrar");
+const btn_novo = document.querySelector("#btn_novo");
+const btn_gestao = document.querySelector("#btn_gestao");
 
 btn_home.addEventListener("click", (evt) => {
     abrirAba(evt.target, "./assets/pages/home.html");
