@@ -31,8 +31,8 @@ btn_cancelar.addEventListener("click", (evento) => {
 
 const preencherdgv = (endpoint) => {
     dados.innerHTML = "";
-    //const entpoint = `http://127.0.0.1:1880/pesquisartodoscontatos`;
-    fetch(endpoint)
+    const endpointTodosContatos = `http://127.0.0.1:1880/pesquisartodoscontatos`;
+    fetch(endpointTodosContatos)
     .then(res => res.json())
     .then(res => {
         dados.innerHTML = "";

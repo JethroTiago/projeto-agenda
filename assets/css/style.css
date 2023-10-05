@@ -20,6 +20,16 @@
     --secundary-font: 'Fjjala One', sans-serif;
 }
 
+.cabecalho {
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+    color: var(--background-secundario);
+    font-family: var(--primary-font);
+    background-color: var(--transparencia);
+    border: none;
+}
+
 .btn_agenda {
     background-color: var(--background-secundario);
     color: var(--branco);

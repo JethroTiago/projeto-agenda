@@ -2,6 +2,7 @@ h1 {
     text-align: center;
     padding: 10px;
     color: var(--background-secundario);
+    font-family: var(--secundary-font);
 }
 
 .dgv {

@@ -23,6 +23,12 @@
     width: 100%;
 }
 
+.formCampo label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-family: var(--primary-font);
+}
+
 .formCampo input {
     width: 100%;
     padding: 10px;

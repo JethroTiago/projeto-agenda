@@ -3,3 +3,12 @@
     justify-content: center;
     align-items: center;
 }
+
+.cabecalho h1 {
+    font-size: 80px;
+}
+
+.cabecalho_img {
+    width: 100px;
+    margin: 0 50px 0 0px;
+}
