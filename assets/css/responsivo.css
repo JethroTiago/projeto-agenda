@@ -1,0 +1,24 @@
+@media (max-width: 769px) {
+    .pesquisar {
+        justify-content: center;
+    }
+
+    .titulos {
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        flex-direction: row;
+        width: 90vw;
+    }
+
+    .dados_linhas {
+        display: flex;
+        justify-content: centar;
+        align-items: center;
+        margin-left: 60px;
+    }
+
+    .c5 {
+        display: none;
+    }
+}
